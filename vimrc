@@ -13,11 +13,11 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-sleuth')             " heuristic whitespace setting
   call minpac#add('tpope/vim-surround')           " 'surroundings' operators
   call minpac#add('tpope/vim-repeat')             " repeat whole plugin maps
+  call minpac#add('tpope/vim-vinegar')            " settings for netrw
   call minpac#add('ludovicchabant/vim-gutentags') " automatic tag generation
   call minpac#add('dense-analysis/ale')           " async linting
   call minpac#add('sheerun/vim-polyglot')         " syntax file pack
   call minpac#add('lifepillar/vim-solarized8')    " colorscheme
-  call minpac#add('justinmk/vim-dirvish')         " simple file browser that doesn't suck
 endif
 
 command! PackSync 
@@ -51,6 +51,9 @@ nnoremap <leader><leader> :noh<cr>
 nnoremap <leader>p :find<space>
 nnoremap <leader>e :find <c-r>=expand("%:p:h")<cr>/**/
 nnoremap <leader>j :tjump<space>
+
+"useful for notetaking
+nnoremap <leader>d :read !date<cr>
 
 " COLORSCHEME
 
